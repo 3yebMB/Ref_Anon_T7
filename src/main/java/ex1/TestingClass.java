@@ -27,11 +27,11 @@ class TestingClass {
         for (Method method : methods)
             if (method.getAnnotation(BeforeSuite.class) != null) {
                 if (beforeMethod != null)
-                    throw new RuntimeException("The method with the @BeforeSuite annotation should be one");
+                    throw new RuntimeException("Отсутсвует метод с анотацией @BeforeSuite");
                 beforeMethod = method;
             } else if (method.getAnnotation(AfterSuite.class) != null) {
                 if (afterMethod != null)
-                    throw new RuntimeException("The method with the @AfterSuite annotation should be one");
+                    throw new RuntimeException("Отсутсвует метод с анотацией @AfterSuite");
                 afterMethod = method;
             } else if (method.getAnnotation(Test.class) != null){
                 Test annotationTst = method.getAnnotation(Test.class);
@@ -57,22 +57,22 @@ class TestingClass {
 
     @Test(value = 5)
     public void Test5() {
-        System.out.println("Performed Test 5");
+        System.out.println("Тест №5");
     }
     @Test(value = 3)
     public void Test2(){
-        System.out.println("Performed Test 2");
+        System.out.println("Тест №2");
     }
     @Test(value = 1)
     public void Test1(){
-        System.out.println("Performed Test 1");
+        System.out.println("Тест №1");
     }
     @BeforeSuite
     public void BeforeAll(){
-        System.out.println("This method is performed before all");
+        System.out.println("Метод исполняется перед всеми тестами");
     }
     @AfterSuite
     public void AfterAll() {
-        System.out.println("This method is performed after all");
+        System.out.println("Метод исполняется после всех тестов");
     }
 }
