@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?scenebuilder-stylesheet /css/Styles.css?>
 
@@ -14,7 +15,8 @@
             <ChoiceBox fx:id="choiceBox1" accessibleHelp="choice disk" accessibleText="choice disk2" layoutX="14.0" layoutY="14.0" prefHeight="28.0" prefWidth="127.0" />
             <ListView layoutX="14.0" layoutY="51.0" prefHeight="335.0" prefWidth="127.0" style="-fx-border-radius: 3; -fx-border-width: 1; -fx-border-color: gray;" />
             <ListView layoutX="149.0" layoutY="52.0" prefHeight="335.0" prefWidth="127.0" style="-fx-border-radius: 3; -fx-border-width: 1; -fx-border-color: gray;" />
-            <Label layoutX="181.0" layoutY="20.0" prefHeight="18.0" prefWidth="130.0" text=".class files" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="20.0" prefHeight="18.0" prefWidth="123.0" text=".class files" textAlignment="CENTER" />
+            <TextArea editable="false" layoutX="285.0" layoutY="14.0" prefHeight="371.0" prefWidth="300.0" style="-fx-border-color: gray; -fx-border-radius: 3; -fx-border-width: 1;" wrapText="true" />
          </children></AnchorPane>
   </content>
 </ScrollPane>
